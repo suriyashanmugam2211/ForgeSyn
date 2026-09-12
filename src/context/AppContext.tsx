@@ -5,10 +5,7 @@ import type {
   AgentInfo,
   AgentActivityLog,
   AgentId,
-  InventoryPart,
-  Technician,
   MaintenanceTicket,
-  LearningRecord,
   AppNotification,
   SystemSettings,
   ActiveView,
@@ -16,7 +13,6 @@ import type {
   DiagnosisResult,
   DecisionResult,
   CostBreakdown,
-  WhatIfScenario,
   AgentConflict
 } from '../types';
 import {
@@ -888,6 +884,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         selectedMachineId,
         setSelectedMachineId,
         selectedMachine,
+        injectRandomIncident,
+        generateNewFactorySetup,
         incidents,
         selectedIncidentId,
         setSelectedIncidentId,
